@@ -1,5 +1,10 @@
-version: '3'
+version: "3"
 services:
+  common-build-go-grpc:
+    build:
+      context: ./common-build/alpine
+      dockerfile: Dockerfile
+    image: common-grpc-alpine
   proxy:
     build:
       context: ./envoy
